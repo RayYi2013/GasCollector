@@ -6,5 +6,5 @@ public class MapData {
     public Position Ex;
     public int N;
     public int M;
-    public int[][] Data;
+    public long[][] Data;
 }

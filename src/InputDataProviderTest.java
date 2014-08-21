@@ -7,10 +7,16 @@ import java.net.URL;
  */
 public class InputDataProviderTest extends TestCase {
     public void testGetMapDataSet() throws Exception {
+        //arrange
         URL url = getClass().getResource("smallTestData.txt");
-        InputDataProvider provider = new InputDataProvider(url.getPath());
+//        URL url = getClass().getResource("100.txt");
+        String name =url.getPath();
+
+        //action
+        InputDataProvider provider = new InputDataProvider(name);
         MapData[] data = provider.GetMapDataSet();
 
+        //assert
         assertEquals("test case number", 2, data.length);
 
     }
